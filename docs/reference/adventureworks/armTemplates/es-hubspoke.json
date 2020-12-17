@@ -456,14 +456,14 @@
             "landingZone": "[uri(deployment().properties.templateLink.uri, 'auxiliary/lz.json')]",
             "identity": "[uri(deployment().properties.templateLink.uri, 'auxiliary/identity.json')]"
         },
-        "moveSubscription": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-management', '/', parameters('managementSubscriptionId'))]",
-        "noSubscription": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-management', '/', 'na')]",
-        "noOnlineLzSubscription": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-online', '/', 'nalz')]",
-        "noCorpLzSubscription": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-corp', '/', 'nalz')]",
-        "connectivityMoveSubscription": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-connectivity', '/', parameters('connectivitySubscriptionId'))]",
-        "noConnectivitySubscription": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-connectivity', '/', 'naconn')]",
-        "identityMoveSubscription": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-identity', '/', parameters('identitySubscriptionId'))]",
-        "noIdentitySubscription": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-identity', '/', 'naid')]",
+        "moveSubscription": "[concat(parameters('enterpriseScaleCompanyPrefix'), 'SCED-MGMT-MGM', '/', parameters('managementSubscriptionId'))]",
+        "noSubscription": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-SCED-MGMT-MGM', '/', 'na')]",
+        "noOnlineLzSubscription": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-SCED-NPRD-MGM', '/', 'nalz')]",
+        "noCorpLzSubscription": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-SCED-PROD-MGM', '/', 'nalz')]",
+        "connectivityMoveSubscription": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-SCED-CORE-MGM', '/', parameters('connectivitySubscriptionId'))]",
+        "noConnectivitySubscription": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-SCED-CORE-MGM', '/', 'naconn')]",
+        "identityMoveSubscription": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-SCED-ID-MGM', '/', parameters('identitySubscriptionId'))]",
+        "noIdentitySubscription": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-SCED-ID-MDM', '/', 'naid')]",
         "deploymentNames": {
             "mgmtGroupDeploymentName": "[take(concat('EntScale-Mgs', '-', deployment().location, guid(parameters('enterpriseScaleCompanyPrefix'))), 64)]",
             "policyDeploymentName": "[take(concat('EntScale-Policy', '-', deployment().location, guid(parameters('enterpriseScaleCompanyPrefix'))), 64)]",
@@ -580,7 +580,7 @@
             "condition": "[not(empty(parameters('corpLzSubscriptionId')))]",
             "type": "Microsoft.Management/managementGroups/subscriptions",
             "apiVersion": "2020-05-01",
-            "name": "[if(not(empty(parameters('corpLzSubscriptionId'))), concat(parameters('enterpriseScaleCompanyPrefix'), '-corp', '/', parameters('corpLzSubscriptionId')[copyIndex()]), variables('noCorpLzSubscription'))]",
+            "name": "[if(not(empty(parameters('corpLzSubscriptionId'))), concat(parameters('enterpriseScaleCompanyPrefix'), '-SCED-PROD-MGM', '/', parameters('corpLzSubscriptionId')[copyIndex()]), variables('noCorpLzSubscription'))]",
             "dependsOn": [
                 "[variables('deploymentNames').mgmtGroupDeploymentName]"
             ],
@@ -594,7 +594,7 @@
             "condition": "[and(not(empty(parameters('managementSubscriptionId'))),equals(parameters('enableLogAnalytics'), 'Yes'))]",
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2019-05-01",
-            "scope": "[concat('Microsoft.Management/managementGroups/', parameters('enterpriseScaleCompanyPrefix'), '-management')]",
+            "scope": "[concat('Microsoft.Management/managementGroups/', parameters('enterpriseScaleCompanyPrefix'), '-SCED-MGMT-MGM')]",
             "name": "[variables('deploymentNames').monitoringDeploymentName]",
             "dependsOn": [
                 "[variables('deploymentNames').policyDeploymentName]",
