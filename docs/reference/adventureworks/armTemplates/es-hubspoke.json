@@ -456,7 +456,7 @@
             "landingZone": "[uri(deployment().properties.templateLink.uri, 'auxiliary/lz.json')]",
             "identity": "[uri(deployment().properties.templateLink.uri, 'auxiliary/identity.json')]"
         },
-        "moveSubscription": "[concat(parameters('enterpriseScaleCompanyPrefix'), 'SCED-MGMT-MGM', '/', parameters('managementSubscriptionId'))]",
+        "moveSubscription": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-SCED-MGMT-MGM', '/', parameters('managementSubscriptionId'))]",
         "noSubscription": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-SCED-MGMT-MGM', '/', 'na')]",
         "noOnlineLzSubscription": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-SCED-NPRD-MGM', '/', 'nalz')]",
         "noCorpLzSubscription": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-SCED-PROD-MGM', '/', 'nalz')]",
@@ -566,7 +566,7 @@
             "condition": "[not(empty(parameters('onlineLzSubscriptionId')))]",
             "type": "Microsoft.Management/managementGroups/subscriptions",
             "apiVersion": "2020-05-01",
-            "name": "[if(not(empty(parameters('onlineLzSubscriptionId'))), concat(parameters('enterpriseScaleCompanyPrefix'), '-online', '/', parameters('onlineLzSubscriptionId')[copyIndex()]), variables('noOnlineLzSubscription'))]",
+            "name": "[if(not(empty(parameters('onlineLzSubscriptionId'))), concat(parameters('enterpriseScaleCompanyPrefix'), '-SCED-NPRD-MGM', '/', parameters('onlineLzSubscriptionId')[copyIndex()]), variables('noOnlineLzSubscription'))]",
             "dependsOn": [
                 "[variables('deploymentNames').mgmtGroupDeploymentName]"
             ],
@@ -716,7 +716,7 @@
             "condition": "[or(or(or(or(or(or(equals(parameters('enableVmBackup'), 'Yes'), equals(parameters('enableSqlAudit'), 'Yes')), equals(parameters('denyAksPrivilegedEscalation'), 'Yes'), equals(parameters('denyHttpIngressForAks'), 'Yes')), equals(parameters('denyAksPrivileged'), 'Yes'), equals(parameters('denyAksPrivileged'), 'Yes')), equals(parameters('denySubnetWithoutNsg'), 'Yes'), equals(parameters('enableSqlAssessment'), 'Yes')), equals(parameters('enableVmMonitoring'), 'Yes'), equals(parameters('enableVmMonitoring'), 'Yes')), equals(parameters('enableSqlEncryption'), 'Yes'), equals(parameters('enableStorageHttps'), 'Yes'))]",
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2019-05-01",
-            "scope": "[concat('Microsoft.Management/managementGroups/', parameters('enterpriseScaleCompanyPrefix'), '-landingzones')]",
+            "scope": "[concat('Microsoft.Management/managementGroups/', parameters('enterpriseScaleCompanyPrefix'), '-SCED-LZ-MGM')]",
             "name": "[variables('deploymentNames').lzDeploymentName]",
             "dependsOn": [
                 "[variables('deploymentNames').policyDeploymentName]",
