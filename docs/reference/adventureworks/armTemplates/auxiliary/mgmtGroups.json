@@ -35,7 +35,7 @@
             "platform": "[concat(parameters('topLevelManagementGroupPrefix'), '-', 'SCED-PLATFORM-MGM')]",
             "landingZone": "[concat(parameters('topLevelManagementGroupPrefix'), '-', 'SCED-LZ-MGM')]",
             "decommissioned": "[concat(parameters('topLevelManagementGroupPrefix'), '-', 'SCED-DECOMMISSIONED-MGM')]",
-            "sandboxes": "[concat(parameters('topLevelManagementGroupPrefix'), '-', 'SCEDSANDBOXES-MGM')]"
+            "sandboxes": "[concat(parameters('topLevelManagementGroupPrefix'), '-', 'SCED-SANDBOXES-MGM')]"
         }
     },
     "resources": [
