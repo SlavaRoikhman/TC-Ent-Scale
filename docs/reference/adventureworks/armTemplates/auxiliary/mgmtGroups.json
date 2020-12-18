@@ -32,10 +32,10 @@
     },
     "variables": {
         "enterpriseScaleManagementGroups": {
-            "platform": "[concat(parameters('topLevelManagementGroupPrefix'), '-', 'PLATFORM-MGM')]",
-            "landingZone": "[concat(parameters('topLevelManagementGroupPrefix'), '-', 'LZ-MGM')]",
-            "decommissioned": "[concat(parameters('topLevelManagementGroupPrefix'), '-', 'DECOMMISSIONED-MGM')]",
-            "sandboxes": "[concat(parameters('topLevelManagementGroupPrefix'), '-', 'SANDBOXES-MGM')]"
+            "platform": "[concat(parameters('topLevelManagementGroupPrefix'), '-', 'SCED-PLATFORM-MGM')]",
+            "landingZone": "[concat(parameters('topLevelManagementGroupPrefix'), '-', 'SCED-LZ-MGM')]",
+            "decommissioned": "[concat(parameters('topLevelManagementGroupPrefix'), '-', 'SCED-DECOMMISSIONED-MGM')]",
+            "sandboxes": "[concat(parameters('topLevelManagementGroupPrefix'), '-', 'SCEDSANDBOXES-MGM')]"
         }
     },
     "resources": [
