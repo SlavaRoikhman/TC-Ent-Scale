@@ -10,7 +10,7 @@
         },
         "workspaceName": {
             "type": "string",
-            "defaultValue": "SCED-MGMT-CACN-LAW"
+            "defaultValue": "SCED-MGMT-CACN-LAW2"
         },
         "workspaceRegion": {
             "type": "string",
@@ -90,7 +90,7 @@
         }
     },
     "variables": {
-        "laResourceId": "[toLower(concat('/subscriptions/', parameters('managementSubscriptionId'), '/resourceGroups/', 'SCED-MGMT-CACN-MGMT-RGP', '/providers/Microsoft.OperationalInsights/workspaces/', 'SCED-MGMT-CACN-LAW'))]",
+        "laResourceId": "[toLower(concat('/subscriptions/', parameters('managementSubscriptionId'), '/resourceGroups/', 'SCED-MGMT-CACN-MGMT-RGP', '/providers/Microsoft.OperationalInsights/workspaces/', 'SCED-MGMT-CACN-LAW2'))]",
         "solutions": {
             "security": {
                 "name": "[concat('Security', '(', parameters('workspaceName'), ')')]",
