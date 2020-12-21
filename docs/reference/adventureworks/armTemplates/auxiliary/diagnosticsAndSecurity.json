@@ -223,7 +223,7 @@
                 "scope": "[concat('/providers/Microsoft.Management/managementGroups/', parameters('topLevelManagementGroupPrefix'))]",
                 "parameters": {
                     "logAnalytics": {
-                        "value": "[toLower(concat('/subscriptions/', parameters('managementSubscriptionId'), '/resourceGroups/', 'SCED-MGMT-CACN-MGMT-RGP', '/providers/Microsoft.OperationalInsights/workspaces/', 'SCED-MGMT-CACN-LAW2'))]"
+                        "value": "[toLower(concat('/subscriptions/', parameters('managementSubscriptionId'), '/resourceGroups/', 'SCED-MGMT-CACN-MGMT-RGP', '/providers/Microsoft.OperationalInsights/workspaces/', 'SCED-MGMT-CACN-LAW'))]"
                     },
                     "logsEnabled": {
                         "value": "True"
@@ -263,7 +263,7 @@
                 "scope": "[concat('/providers/Microsoft.Management/managementGroups/', parameters('topLevelManagementGroupPrefix'))]",
                 "parameters": {
                     "logAnalytics_1": {
-                        "value": "[toLower(concat('/subscriptions/', parameters('managementSubscriptionId'), '/resourceGroups/', 'SCED-MGMT-CACN-MGMT-RGP', '/providers/Microsoft.OperationalInsights/workspaces/', 'SCED-MGMT-CACN-LAW2'))]"
+                        "value": "[toLower(concat('/subscriptions/', parameters('managementSubscriptionId'), '/resourceGroups/', 'SCED-MGMT-CACN-MGMT-RGP', '/providers/Microsoft.OperationalInsights/workspaces/', 'SCED-MGMT-CACN-LAW'))]"
                     }
                 }
             }
@@ -300,7 +300,7 @@
                 "scope": "[concat('/providers/Microsoft.Management/managementGroups/', parameters('topLevelManagementGroupPrefix'))]",
                 "parameters": {
                     "logAnalytics_1": {
-                        "value": "[toLower(concat('/subscriptions/', parameters('managementSubscriptionId'), '/resourceGroups/', 'SCED-MGMT-CACN-MGMT-RGP', '/providers/Microsoft.OperationalInsights/workspaces/', 'SCED-MGMT-CACN-LAW2'))]"
+                        "value": "[toLower(concat('/subscriptions/', parameters('managementSubscriptionId'), '/resourceGroups/', 'SCED-MGMT-CACN-MGMT-RGP', '/providers/Microsoft.OperationalInsights/workspaces/', 'SCED-MGMT-CACN-LAW'))]"
                     }
                 }
             }
@@ -337,7 +337,7 @@
                 "scope": "[concat('/providers/Microsoft.Management/managementGroups/', parameters('topLevelManagementGroupPrefix'))]",
                 "parameters": {
                     "logAnalytics": {
-                        "value": "[toLower(concat('/subscriptions/', parameters('managementSubscriptionId'), '/resourceGroups/', 'SCED-MGMT-CACN-MGMT-RGP', '/providers/Microsoft.OperationalInsights/workspaces/', 'SCED-MGMT-CACN-LAW2'))]"
+                        "value": "[toLower(concat('/subscriptions/', parameters('managementSubscriptionId'), '/resourceGroups/', 'SCED-MGMT-CACN-MGMT-RGP', '/providers/Microsoft.OperationalInsights/workspaces/', 'SCED-MGMT-CACN-LAW'))]"
                     }
                 }
             }
@@ -374,7 +374,7 @@
                 "scope": "[concat('/providers/Microsoft.Management/managementGroups/', parameters('topLevelManagementGroupPrefix'))]",
                 "parameters": {
                     "logAnalytics": {
-                        "value": "[toLower(concat('/subscriptions/', parameters('managementSubscriptionId'), '/resourceGroups/', 'SCED-MGMT-CACN-MGMT-RGP', '/providers/Microsoft.OperationalInsights/workspaces/', 'SCED-MGMT-CACN-LAW2'))]"
+                        "value": "[toLower(concat('/subscriptions/', parameters('managementSubscriptionId'), '/resourceGroups/', 'SCED-MGMT-CACN-MGMT-RGP', '/providers/Microsoft.OperationalInsights/workspaces/', 'SCED-MGMT-CACN-LAW'))]"
                     }
                 }
             }
@@ -411,7 +411,7 @@
                 "scope": "[concat('/providers/Microsoft.Management/managementGroups/', parameters('topLevelManagementGroupPrefix'))]",
                 "parameters": {
                     "logAnalytics": {
-                        "value": "[toLower(concat('/subscriptions/', parameters('managementSubscriptionId'), '/resourceGroups/', 'SCED-MGMT-CACN-MGMT-RGP', '/providers/Microsoft.OperationalInsights/workspaces/', 'SCED-MGMT-CACN-LAW2'))]"
+                        "value": "[toLower(concat('/subscriptions/', parameters('managementSubscriptionId'), '/resourceGroups/', 'SCED-MGMT-CACN-MGMT-RGP', '/providers/Microsoft.OperationalInsights/workspaces/', 'SCED-MGMT-CACN-LAW'))]"
                     }
                 }
             }

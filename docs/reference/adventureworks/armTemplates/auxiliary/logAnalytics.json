@@ -55,7 +55,7 @@
                 "scope": "[concat('/providers/Microsoft.Management/managementGroups/', parameters('topLevelManagementGroupPrefix'), '-SCED-MGMT-MGM')]",
                 "parameters": {
                     "workspaceName": {
-                        "value": "SCED-MGMT-CACN-LAW2"
+                        "value": "SCED-MGMT-CACN-LAW"
                     },
                     "automationAccountName": {
                         "value": "SCED-MGMT-CACN-AAA"
